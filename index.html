@@ -7,16 +7,24 @@
 </head>
 
 <div class="header">
-    <a href='/index.html'><img src="Syncify Logo.png" alt="Syncify Logo" height="50"></a>
+    <a href='/index.html'><img src="/Media/Syncify Logo.png" alt="Syncify Logo" height="50"></a>
 </div>
 
 
 <body>
-    <main id="intro">
-        <h1>Welcome to Syncify.</h1>
-        <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
-        <button type="button">Get Started</button>
-    </main>
+    <div id="introbox">
+        <main id="intro">
+            <h1>Welcome to Syncify.</h1>
+            <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
+            <button type="button">Get Started</button>
+        </main>
+    </div>
+    <div id="processing">
+        <h1>How It Works</h1>
+        <img src="/Media/Process.png" alt="Uploading Process" width="500">
+        <p>Our servers receive an API call from your connected activity tracker,and are then filtered based on your inputs. Depending on filtering, the activity will then either be uploaded to Strava or ignored.</p>
+        <p>Your activity data is never stored, sold, or shared. As soon as an acitivity is successfully uploaded, the file will be permanently removed from our servers. </p>
+    </div>
 </body>
 
 <footer>

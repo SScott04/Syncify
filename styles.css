@@ -24,8 +24,6 @@ footer {
     font-family: 'Arial';
     font-size: 15;
     width: 100%;
-    position: fixed;
-    bottom: 0;
     height: 50px;
     align-items: center;
 }
@@ -46,9 +44,23 @@ a:hover {
 }
 
 #intro {
-    margin-top: 15vh
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 10vw;
+    padding-top: 2vw;
+    background-color: rgba(235, 233, 233, 0.653);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
+#introbox {
+    background-image: url(/Media/MainBackground.JPEG);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+}
 .header-policy {
     background-color: rgb(45, 45, 45);
 }
