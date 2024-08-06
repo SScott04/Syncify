@@ -108,13 +108,13 @@ button:hover{
     padding-left: 5vw;
     padding-right: 5vw;
     padding-bottom: 10vw;
-    max-width: 500px;
+    max-width: 1000px;
     margin: auto;
 }
 
 .processing img {
     width: 100%;
-    max-width: 500px;
+    max-width: 1000px;
 }
 
 .processing h1 {
