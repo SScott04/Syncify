@@ -5,6 +5,10 @@
     <title>Syncify Home</title>
     <link rel="icon" type="image/x-icon" href="/Media/favicon.ico">
     <link rel="stylesheet" href="/styles.css"/>
+
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1096784729428-jei7om2ntlk032bc9034gduddrljhne1.apps.googleusercontent.com">
 </head>
 
 <div class="header">
@@ -17,7 +21,7 @@
         <main id="intro">
             <h1>Welcome to Syncify.</h1>
             <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
-            <button type="button">Get Started</button>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </main>
     </div>
     <div class="processing">
