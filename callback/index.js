@@ -5,7 +5,7 @@ const port = 3000;
 
 const CLIENT_ID = 'YOUR_CLIENT_ID';
 const CLIENT_SECRET = 'YOUR_CLIENT_SECRET';
-const REDIRECT_URI = 'http://localhost:3000/oauth2callback';
+const REDIRECT_URI = 'https://syncify.fit/oauth2callback';
 
 const client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 
