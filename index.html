@@ -35,7 +35,7 @@
         function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     // Send the ID token to your backend
-    fetch('https://syncify-r9qvc.ondigitalocean.app/auth/google', {
+    fetch('https://syncify-r9qvc.ondigitalocean.app/auth/google/callback', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
