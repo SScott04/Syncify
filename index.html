@@ -25,7 +25,7 @@
             <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
             <html>
 
-        <script src="https://accounts.google.com/gsi/client" async></script>
+        
        
         <html>
             <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -34,6 +34,7 @@
     <script>
         function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
+    console.log("Sending token")
     // Send the ID token to your backend
     fetch('https://syncify-r9qvc.ondigitalocean.app/auth/google/callback', {
         method: 'POST',
