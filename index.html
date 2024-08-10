@@ -25,22 +25,29 @@
             <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
             <html>
 
-            <script src="https://accounts.google.com/gsi/client" async></script>
-            <div id="g_id_onload"
-                data-client_id="1096784729428-q3ohm0tcv8q3ldpajuvq521jev1jdvhd.apps.googleusercontent.com"
-                data-login_uri="http://localhost:3000/home"
-                data-auto_prompt="false">
-            </div>
-            <div class="g_id_signin"
-                data-type="standard"
-                data-size="large"
-                data-theme="outline"
-                data-text="sign_in_with"
-                data-shape="rectangular"
-                data-logo_alignment="left">
-            </div>
-        </main>
-    </div>
+        <script src="https://accounts.google.com/gsi/client" async></script>
+       
+        <html>
+    <body>
+        <div id="g_id_onload"
+            data-client_id="1096784729428-j2cqlt3vorsfqjjooubgogikbak4fnoj.apps.googleusercontent.com"
+            data-login_uri="https://www.syncify.fit"
+            data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+            data-type="standard"
+            data-size="large"
+            data-theme="outline"
+            data-text="sign_in_with"
+            data-shape="rectangular"
+            data-callback="OnSuccess"
+            data-logo_alignment="left">
+        </div>
+        </body>
+    </html>
+</div>
+
+
     <div class="processing">
         <h1>How It Works</h1>
         <img src="/Media/Process.png" alt="Uploading Process">
