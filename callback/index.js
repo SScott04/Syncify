@@ -60,4 +60,17 @@ app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
 });
 
+const headerName = document.querySelector("#username")
 
+function onSignIn(googleUser) {
+  // Get the profile information if needed
+  var profile = googleUser.getBasicProfile();
+  headerName.innerText = profile.getName();
+  console.log('ID: ' + profile.getId());
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail());
+
+  // Redirect to the desired page
+  window.location.href = 'http://localhost:3000/home;
+}

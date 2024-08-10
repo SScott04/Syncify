@@ -10,6 +10,9 @@ body {
 }
 
 .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: rgb(45, 45, 45);
     color: white;
     text-align: left;
@@ -126,4 +129,10 @@ button:hover{
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+#username {
+    padding-right: 25px;
+    font-size: 16px;
+    color: #e1e1e1;
 }

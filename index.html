@@ -8,11 +8,13 @@
 
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="1096784729428-jei7om2ntlk032bc9034gduddrljhne1.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="1096784729428-q3ohm0tcv8q3ldpajuvq521jev1jdvhd.apps.googleusercontent.com">
 </head>
 
 <div class="header">
-    <a href='/index.html'><img src="/Media/Syncify Logo.png" alt="Syncify Logo" height="50"></a>
+    <span><a href='/index.html'><img src="/Media/Syncify Logo.png" alt="Syncify Logo" height="50"></a></span>
+    <span id="username">No User</span>
+
 </div>
 
 
@@ -21,7 +23,22 @@
         <main id="intro">
             <h1>Welcome to Syncify.</h1>
             <p>Syncify is a website designed to facilitate syncing fitness trackers to Strava</p>
-                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <html>
+
+            <script src="https://accounts.google.com/gsi/client" async></script>
+            <div id="g_id_onload"
+                data-client_id="1096784729428-q3ohm0tcv8q3ldpajuvq521jev1jdvhd.apps.googleusercontent.com"
+                data-login_uri="http://localhost:3000/home"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin"
+                data-type="standard"
+                data-size="large"
+                data-theme="outline"
+                data-text="sign_in_with"
+                data-shape="rectangular"
+                data-logo_alignment="left">
+            </div>
         </main>
     </div>
     <div class="processing">
