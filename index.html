@@ -45,6 +45,14 @@
         </div>
         </body>
     </html>
+
+    <script>
+        function onSuccess() {
+            var profile = googleUser.getBasicProfile();
+            name = document.getElementById("username");
+            name.innerText = profile.getName();
+        }
+    </script>
 </div>
 
 
