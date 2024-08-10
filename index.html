@@ -32,11 +32,22 @@
     </html>
 
     <script>
-        function onSuccess() {
-            var profile = googleUser.getBasicProfile();
-            name = document.getElementById("username");
-            name.innerText = profile.getName();
+        function onSignIn(googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
+    // Send the ID token to your backend
+    fetch('https://syncify-r9qvc.ondigitalocean.app/auth/google', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ token: id_token })
+    }).then(response => {
+        if (response.ok) {
+            window.location.href = 'https://syncify.fit/home';
         }
+    });
+}
+
     </script>
 </div>
 
