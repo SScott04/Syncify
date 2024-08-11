@@ -136,3 +136,39 @@ button:hover{
     font-size: 16px;
     color: #e1e1e1;
 }
+
+.filters {
+    font-size: 25px;
+    color: rgb(59, 59, 59);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10vw;
+    padding-top: 10vh;
+    margin-right: 10vw;
+    border-bottom: 1.5px solid rgb(59, 59, 59);
+}
+
+#filterbutton {
+    background-color: white;
+    border-color: rgb(59, 59, 59);
+    border-radius: 0px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-width: 1.5px;
+    border-left-width: 1.5px;
+    border-right-width: 1.5px;
+    cursor: pointer;
+}
+
+#filterbutton:hover {
+    background-color: rgb(244, 242, 242);
+    border-color: black;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-width: 1.5px;
+    border-left-width: 1.5px;
+    border-right-width: 1.5px;
+    cursor: pointer;
+}
