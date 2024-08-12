@@ -1,33 +1,29 @@
-function onSignIn(googleUser) {
-  // Get the Google user profile information
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId());
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
-
-  var id_token = googleUser.getAuthResponse().id_token;
-console.log("ID Token: " + id_token);
-
-  // Get the ID token and send it to your server
-  var id_token = googleUser.getAuthResponse().id_token;
-  console.log("ID Token: " + id_token);
-
-  // Now, send the token to your server
-  var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://syncify-r9qvc.ondigitalocean.app/tokensignin');
-  xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.onload = function() {
-      console.log('Signed in as: ' + xhr.responseText);
-  };
-  xhr.send(JSON.stringify({token: id_token}));
+function handleCredentialResponse(response) {
+  const token = response.credential;
+  fetch('https://syncify-r9qvc.ondigitalocean.app/tokensignin', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ id_token: token }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      console.log('Login successful:', data.payload);
+    } else {
+      console.error('Login failed:', data.error);
+    }
+  });
 }
 
-app.use((req, res, next) => {
-  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
-  next();
-});
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});
+window.onload = function () {
+  google.accounts.id.initialize({
+    client_id: '1096784729428-j2cqlt3vorsfqjjooubgogikbak4fnoj.apps.googleusercontent.com',
+    callback: handleCredentialResponse,
+  });
+  google.accounts.id.renderButton(
+    document.getElementById('buttonDiv'),
+    { theme: 'outline', size: 'large' }
+  );
+};
