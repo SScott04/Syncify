@@ -1,3 +1,4 @@
+const username = document.getElementById("username");
 
 function handleCredentialResponse(response) {
   const token = response.credential;
@@ -37,3 +38,9 @@ window.onload = function () {
     { theme: 'outline', size: 'large' }
   );
 };
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log(profile.getName());
+  username.innerText = profile.getName();
+}
