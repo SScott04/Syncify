@@ -18,6 +18,7 @@ function handleCredentialResponse(response) {
     console.log('Received data from backend:', data);
     if (data.success) {
       console.log('Login successful:', data.user);
+      document.getElementById("username").innerText = data.user.name
     } else {
       console.error('Login failed:', data.error);
     }
@@ -38,9 +39,3 @@ window.onload = function () {
     { theme: 'outline', size: 'large' }
   );
 };
-
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log(profile.getName());
-  username.innerText = profile.getName();
-}
