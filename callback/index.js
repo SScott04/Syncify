@@ -22,3 +22,12 @@ console.log("ID Token: " + id_token);
   };
   xhr.send(JSON.stringify({token: id_token}));
 }
+
+app.use((req, res, next) => {
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+  next();
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
