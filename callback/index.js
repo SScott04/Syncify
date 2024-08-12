@@ -6,6 +6,9 @@ function onSignIn(googleUser) {
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail());
 
+  var id_token = googleUser.getAuthResponse().id_token;
+console.log("ID Token: " + id_token);
+
   // Get the ID token and send it to your server
   var id_token = googleUser.getAuthResponse().id_token;
   console.log("ID Token: " + id_token);
