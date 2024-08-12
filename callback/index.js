@@ -1,5 +1,6 @@
 function handleCredentialResponse(response) {
   const token = response.credential;
+  console.log('Received token:', token); // Log the token
   fetch('https://syncify-r9qvc.ondigitalocean.app/tokensignin', {
     method: 'POST',
     headers: {
