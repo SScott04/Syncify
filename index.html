@@ -15,7 +15,13 @@
 
 <div class="header">
     <span><a href='/index.html'><img src="/Media/Syncify Logo.png" alt="Syncify Logo" height="50"></a></span>
-    <span id="username">No User</span>
+    <span id="username" class="dropdown">
+        <button class="dropbtn">No User</button>
+        <div class="dropdown-content">
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+        </div>
+    </span>
     <button><a href="/home/index.html">Home</a></button>
 
 </div>
@@ -36,6 +42,7 @@
     </html>
 
     <script>
+        /*
         function onSignIn(googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     console.log("Sending token")
@@ -52,7 +59,7 @@
         }
     });
 }
-
+*/
     </script>
 </div>
 

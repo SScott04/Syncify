@@ -172,3 +172,37 @@ button:hover{
     border-right-width: 1.5px;
     cursor: pointer;
 }
+
+.dropbtn {
+    background-color: transparent;
+    padding-right: 25px;
+    font-size: 16px;
+    color: #e1e1e1;
+}
+
+.dropbtn:hover {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    color: #e1e1e1;
+    display: none;
+    position: absolute;
+    background-color:  rgb(45, 45, 45);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1.5px solid black;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.dropdown:hover .dropdown-content{
+    display: flex;
+}
