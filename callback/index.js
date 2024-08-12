@@ -2,6 +2,7 @@
 function handleCredentialResponse(response) {
   const token = response.credential;
   console.log('Received token:', token); // Log the token
+  /*
   fetch('https://syncify-r9qvc.ondigitalocean.app/tokensignin', {
     method: 'POST',
     headers: {
@@ -16,7 +17,7 @@ function handleCredentialResponse(response) {
     } else {
       console.error('Login failed:', data.error);
     }
-  });
+  }); */
 }
 
 window.onload = function () {
