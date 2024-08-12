@@ -5,7 +5,8 @@
     <title>Syncify Home</title>
     <link rel="icon" type="image/x-icon" href="/Media/favicon.ico">
     <link rel="stylesheet" href="/styles.css"/>
-    
+
+
     <script src="https://apis.google.com/js/platform.js" async></script>
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
@@ -15,25 +16,43 @@
 <div class="header">
     <span><a href='/index.html'><img src="/Media/Syncify Logo.png" alt="Syncify Logo" height="50"></a></span>
     <span class="dropdown">
-        <button id="username" class="dropbtn">No User</button>
+        <button id="username"  class="dropbtn">No User</button>
         <div class="dropdown-content">
             <a href="#" id="settings">Settings</a>
             <a href="#" id="signout_button">Logout</a>
         </div>
     </span>
-    
 
 </div>
 
 <body>
-    <div class="filters">
-        <span id="filtertitle">Your Filters: </span><span><button id="filterbutton">Add New Filter</button></span>
+    <h2>Select an option below to get started:</h2>
+
+    <div id="signInButtons">
+        <!--Google sign in button-->
+        <div id="g_id_onload"
+            data-client_id="1096784729428-j2cqlt3vorsfqjjooubgogikbak4fnoj.apps.googleusercontent.com"
+            data-context="signin"
+            data-ux_mode="popup"
+            data-login_uri="https://syncify-r9qvc.ondigitalocean.app/tokensignin"
+            data-auto_prompt="false">
+        </div>
+
+        <div id="buttonDiv" class="g_id_signin"
+            data-type="standard"
+            data-shape="rectangular"
+            data-theme="outline"
+            data-text="signin_with"
+            data-size="large"
+            data-logo_alignment="left">
+        </div>
     </div>
-
-
 
 
 
     <script src="/callback/index.js"></script>
 </body>
+
 </html>
+
+

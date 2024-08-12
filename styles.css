@@ -206,3 +206,31 @@ button:hover{
 .dropdown:hover .dropdown-content{
     display: flex;
 }
+
+#accountPrompt {
+    display: flex;
+    flex-direction: column;
+}
+
+#existingAccount {
+    color: black;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+#signingText:hover {
+    font-size: 17px;
+    color: blue;
+}
+
+#login-redirect {
+    width: 50vw;
+    max-width: 500px;
+}
+
+#signInButtons {
+    width: 50vw;
+    min-width: 200px;
+    justify-content: center;
+    margin: auto;
+}
