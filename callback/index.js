@@ -39,3 +39,9 @@ window.onload = function () {
     { theme: 'outline', size: 'large' }
   );
 };
+
+const button = document.getElementById('signout_button');
+button.onclick = () => {
+  google.accounts.id.disableAutoSelect();
+  document.getElementById('username').innerText = 'No User';
+}
