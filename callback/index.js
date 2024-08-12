@@ -1,8 +1,3 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const { OAuth2Client } = require('google-auth-library');
-
-
 
 function handleCredentialResponse(response) {
   const token = response.credential;
