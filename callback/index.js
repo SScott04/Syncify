@@ -2,7 +2,6 @@
 function handleCredentialResponse(response) {
   const token = response.credential;
   console.log('Received token:', token); // Log the token
-  /*
   fetch('https://syncify-r9qvc.ondigitalocean.app/tokensignin', {
     method: 'POST',
     headers: {
@@ -10,15 +9,23 @@ function handleCredentialResponse(response) {
     },
     body: JSON.stringify({ id_token: token }),
   })
-  .then(response => response.json())
+  .then(response => {
+    console.log('Response status:', response.status);
+    return response.json();
+  })
   .then(data => {
+    console.log('Received data from backend:', data);
     if (data.success) {
-      console.log('Login successful:', data.payload);
+      console.log('Login successful:', data.user);
     } else {
       console.error('Login failed:', data.error);
     }
-  }); */
+  })
+  .catch(error => {
+    console.error('Fetch error:', error);
+  });
 }
+
 
 window.onload = function () {
   google.accounts.id.initialize({
