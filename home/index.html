@@ -27,13 +27,62 @@
 
 <body>
     <div class="filters">
-        <span id="filtertitle">Your Filters: </span><span><button id="filterbutton">Add New Filter</button></span>
+        <span id="filtertitle">Your Filters: </span><span><button id="filterButton" onclick="openFilter()">Add New Filter</button></span>
     </div>
 
-
-
+        <div id="filterBackground"> <!--Takes up entire background to provide area to click and close-->
+            <div id="filterPage">
+                <span id="filterTitle">Add Filter</span>
+                <span id="filterCloseButton">X</span>
+                <div>
+                    <form id="addFilters">
+                        <label for="deviceName">Device Name:</label>
+                        <input type="text" id="deviceName">
+                    <br>
+                        <label for="activityType">Activity Type:</label>
+                        <select id="activityType">
+                            <option value="ride">Ride</option>
+                            <option value="run">Run</option>
+                        </select>
+                    <br>
+                    <h4>Filter Conditions</h4>
+        
+                        <label for="filterType">Filter Type:</label>
+                        <select id="filterType">
+                            <option value="" disabled selected>Select Option</option>
+                            <option value="duration">Duration (minutes)</option>
+                            <option value="distance">Distance (km)</option>
+                        </select>
+                    <br>               
+                        <input type="radio" id="greaterThan" value="greaterThan">
+                        <label for="greaterThan">Greater Than</label>
+                        <input type="radio" id="lessThan" value="lessThan">
+                        <label for="lessThan">Less Than</label>
+                    <br>
+                        <label for="value">Value:</label>
+                        <input type="text" id="value">
+                    <br>
+                        <label for="then">Then:</label>
+                        <select id="then">
+                            <option value="" disabled selected>Select Option</option>
+                            <option value="privateUpload">Upload Privately</option>
+                            <option value="dontUpload">Dont Upload</option>
+                        </select>
+                    </form>
+                </div>
+        
+            </div>
+        
+        
+        
+        
+        </div>
+        
+        
+        </html>
 
 
     <script src="/callback/index.js"></script>
+
 </body>
 </html>

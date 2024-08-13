@@ -234,3 +234,21 @@ button:hover{
     justify-content: center;
     margin: auto;
 }
+
+#filterBackground {
+    display: none;
+    background-color: rgba(128, 128, 128, 0.459);
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+#filterPage {
+    background-color: white;
+    width: 75vw;
+    height: 75vh;
+    justify-content: center;
+    margin: auto;
+    border: 1.5px solid black;
+    border-radius: 8px;
+}

@@ -52,7 +52,7 @@ window.onload = function () {
   const registerPage = window.location.pathname === '/register/index.html'
   const homePage = window.location.pathname === '/home/index.html'
 
-  if (!token && !(mainPage || loginPage || registerPage || !homePage)) {
+  if (!token && !(mainPage || loginPage || registerPage || homePage)) {
     window.location.href = '/index.html'
   } else if (token && mainPage) {
     window.location.href = '/home/index.html'
@@ -70,3 +70,16 @@ button.onclick = () => {
   localStorage.removeItem('name');
   window.location.href = '/index.html';
 }
+
+const filterButton = document.getElementById('filterButton')
+const filterPage = document.getElementById('filterBackground')
+
+function openFilter() {
+  filterPage.style.display = 'block';
+}
+
+
+document.getElementById("filterBackground").addEventListener("click", function() {
+  var filteredBackground = document.getElementById("filterBackground");
+      filteredBackground.style.display = "none";
+});

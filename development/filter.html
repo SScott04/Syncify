@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syncify Home</title>
+    <link rel="icon" type="image/x-icon" href="/Media/favicon.ico">
+    <link rel="stylesheet" href="/styles.css"/>
+
+
+    <script src="https://apis.google.com/js/platform.js" async></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <meta name="google-signin-client_id" content="1096784729428-j2cqlt3vorsfqjjooubgogikbak4fnoj.apps.googleusercontent.com">
+</head>
+
+
+<div id="filterBackground"> <!--Takes up entire background to provide area to click and close-->
+    <div id="filterPage">
+        <span id="filterTitle">Add Filter</span>
+        <span id="filterCloseButton">X</span>
+        <div>
+            <form id="addFilters">
+                <label for="deviceName">Device Name:</label>
+                <input type="text" id="deviceName">
+            <br>
+                <label for="activityType">Activity Type:</label>
+                <select id="activityType">
+                    <option value="ride">Ride</option>
+                    <option value="run">Run</option>
+                </select>
+            <br>
+            <h4>Filter Conditions</h4>
+
+                <label for="filterType">Filter Type:</label>
+                <select id="filterType">
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="duration">Duration (minutes)</option>
+                    <option value="distance">Distance (km)</option>
+                </select>
+            <br>               
+                <input type="radio" id="greaterThan" value="greaterThan">
+                <label for="greaterThan">Greater Than</label>
+                <input type="radio" id="lessThan" value="lessThan">
+                <label for="lessThan">Less Than</label>
+            <br>
+                <label for="value">Value:</label>
+                <input type="text" id="value">
+            <br>
+                <label for="then">Then:</label>
+                <select id="then">
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="privateUpload">Upload Privately</option>
+                    <option value="dontUpload">Dont Upload</option>
+                </select>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+
+</html>
