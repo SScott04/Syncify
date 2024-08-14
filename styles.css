@@ -236,8 +236,11 @@ button:hover{
 }
 
 #filterBackground {
+    position: absolute;
     display: none;
-    background-color: rgba(128, 128, 128, 0.459);
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.505);
     width: 100vw;
     height: 100vh;
     z-index: 2;
@@ -251,4 +254,45 @@ button:hover{
     margin: auto;
     border: 1.5px solid black;
     border-radius: 8px;
+}
+
+#filterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1.5px solid black;
+    border-radius: 4px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    text-align: left;  
+}
+
+#editButton {
+    text-align: right;
+    padding-right: 6px;
+    cursor: pointer;
+}
+
+#filterTitleBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 7px;
+}
+
+#filterPageTitle {
+    padding-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#filterCloseButton {
+    text-align: right;
+    cursor: pointer;
+    padding-right: 10px;
+    color: rgb(207, 6, 6);
 }

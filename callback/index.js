@@ -75,11 +75,19 @@ const filterButton = document.getElementById('filterButton')
 const filterPage = document.getElementById('filterBackground')
 
 function openFilter() {
-  filterPage.style.display = 'block';
+  filterPage.style.display = 'flex';
 }
 
 
+//The following code listens for clicks on the background and close button to close the pop up. The last one listens for clicks on the filter page to prevent anything from occuring
 document.getElementById("filterBackground").addEventListener("click", function() {
-  var filteredBackground = document.getElementById("filterBackground");
-      filteredBackground.style.display = "none";
+  this.style.display = "none";
 });
+
+document.getElementById("filterCloseButton").addEventListener("click", function() {
+  document.getElementById("filterBackground").style.display = "none";
+});
+
+document.getElementById("filterPage").addEventListener("click", function(event) {
+  event.stopPropagation();
+})
