@@ -1,3 +1,5 @@
+// The following code is for the google button
+
 const username = document.getElementById("username");
 
 function handleCredentialResponse(response) {
@@ -91,3 +93,6 @@ document.getElementById("filterCloseButton").addEventListener("click", function(
 document.getElementById("filterPage").addEventListener("click", function(event) {
   event.stopPropagation();
 })
+
+
+//The following code is for the rest of the website

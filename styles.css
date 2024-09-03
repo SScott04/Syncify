@@ -296,3 +296,7 @@ button:hover{
     padding-right: 10px;
     color: rgb(207, 6, 6);
 }
+
+#noFilters {
+    color: gray;
+}
